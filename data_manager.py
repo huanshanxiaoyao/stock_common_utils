@@ -73,14 +73,14 @@ class DataManager:
 
 
 if __name__ == '__main__':
-    start_date = '20241101'
+    start_date = '20250501'
     #end_date = '20250104'
     codes = ["300870.SZ","430139.BJ","688449.SH","920029.BJ"]
-    codes = ["836077.BJ"]
+    codes = ["600516.SH","688598.SH"]
     data_manager = DataManager()
-    #data_manager.download_data_async(codes, '1d', start_date)
-    #data1 = data_manager.get_daily_data(['close'], codes, start_date)
+    data_manager.download_data_async(codes, '1d', start_date)
+    data1 = data_manager.get_daily_data(['close'], codes, start_date)
     #data2 = data_manager.get_local_daily_data(['close'], codes, start_date, end_date)
     data2 = data_manager.get_local_minutes_data(['close', 'volume'], codes, '20250514', '20250514')
-    #print(data1)
+    print(data1)
     print(data2)

@@ -1,4 +1,4 @@
-from .trade_days import TradeDays
+from trade_days import TradeDays
 
 def get_trading_days(start_date, end_date):
     """
